@@ -13,6 +13,14 @@ composer require ryancco/laravel-sessions
 
 ## Usage
 
+### Apply the HasSessions trait to your User model
+```php
+class User extends Authenticatable
+{
+    use \Ryancco\Sessions\HasSessions;
+
+```
+
 ### Get a user's active sessions
 `@method active(Carbon|int $last_activity = 60)`
 ```php
